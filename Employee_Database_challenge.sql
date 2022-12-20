@@ -60,3 +60,28 @@ ORDER BY em.emp_no;
 -- Check mentorship_eligibility table
 SELECT *
 FROM mentorship_eligibilty
+
+-- Determining the total salary freed up from retiring employees.  
+SELECT DISTINCT ON (un.emp_no)
+	un.emp_no,
+	un.first_name,
+	un.last_name,
+	un.title,
+	sa.salary
+INTO total_salaries
+FROM unique_titles as un
+INNER JOIN salaries as sa
+on (un.emp_no = sa.emp_no);
+
+SELECT SUM(salary)
+FROM total_salaries;
+
+SELECT sum(tt.salary), 
+	tt.title
+INTO salary_by_titles
+FROM total_salaries as tt
+GROUP BY tt.title;
+
+SELECT *
+FROM salary_by_titles;
+

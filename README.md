@@ -17,7 +17,7 @@
 #### The numbers of employees retiring by title is shown below
 ![Alt text](Data/retirement_title.png)
 #### One of the most impactful number will also be how much salary will become available when all these employees retire.  That number is $3,832,741,608 using the following code.  
-![Alt text](Data/Screenshot%202022-12-20%20100159.png)
+![Alt text](Data/total_retiring_salary.png)
 #### Lastly the data was reviewed to see how much salary was available by job title.  
 ![Alt text](Data/salary_by_title.png)
 
